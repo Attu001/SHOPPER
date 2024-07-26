@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Real Estate</title>
+  <style>
+    body {
+      body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+     
+    }
+
+    }
+
+    .navbar {
+      width: 100%;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 20px;
+      min-height: calc(100vh - 40px); 
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .blue-box {
+      position: absolute;
+      width: 50vmin;
+      height: 50vmin;
+      background-color: #80BBFF;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(144deg);
+      opacity: 0.1;
+      border-radius: 50%;
+      box-shadow: 0 0 600px #80BBFF;
+      z-index: 0;
+    }
+
+    .frame {
+      position: relative;
+      background-color: transparent;
+      height: max-content;
+      width: 80%;
+      color: black;
+      text-align: center;
+      z-index: 1;
+      gap: 16px;
+      font-family: Montserrat, sans-serif;
+      font-weight: bold;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 70px;
+      padding: 10px;
+    }
+
+    .middel-text {
+      color: #044b9c;
+    }
+
+    .downer-text {
+      font-family: Open Sans;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+
+    }
+
+    .get-but {
+      width: Fixed (408px)px;
+      height: Hug (56px)px;
+      padding: 13px 136px 13px 136px;
+      gap: 4px;
+      background-color: #0078FF;
+      ;
+      opacity: 0px;
+      border-radius: 32px;
+    }
+
+    .text-inside {
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+
+    }
+
+    .wrapper {
+      position: relative;
+      top: 250px;
+
+
+    }
+
+    .header-image {
+
+      width: 796px;
+      height: 538px;
+      top: 659px;
+      left: 322px;
+      gap: 0px;
+      opacity: 0px;
+
+    }
+
+    .heading2 {
+      font: bold;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .wrapper2 {
+      max-width: 100%;
+      position: relative;
+      top: 400px;
+
+    }
+
+    .landing {
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      max-width: 1300px;
+      padding: 20px;
+      box-sizing: border-box;
+
+    }
+
+    .landing-img {
+      width: 100%;
+      height: auto;
+
+    }
+
+    .text-content {
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .land-head {
+      font-family: Montserrat;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: left;
+
+    }
+
+    .land-text {
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: left;
+
+    }
+
+    .wrapper3 {
+      position: relative;
+      top: 550px;
+      max-width: 100%;
+      text-align: center;
+
+    }
+
+
+    .dash {
+      font: H400-bold;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      margin-top: 5%;
+      columns: #0000;
+
+
+    }
+
+    .dash2 {
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+
+    }
+
+    .service-span {
+      font-style: H200-bold;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22.5px;
+      text-align: center;
+
+    }
+
+    .service-text {
+      font-style: Body300/rg;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.07px;
+      text-align: center;
+
+
+    }
+
+    .service-block {
+      display: flex;
+
+    }
+
+    .s-block {
+      width: fixed (297px)px;
+      height: Hug (239px)px;
+      padding: 32px 16px 32px 16px;
+      gap: 16px;
+      border-radius: 8px 0px 0px 0px;
+      opacity: 0px;
+      box-shadow: 1px 1px 1px 1px rgb(214, 202, 202);
+      margin: 50px;
+
+    }
+
+    .left-head {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31.2px;
+      text-align: left;
+
+    }
+
+    .left-text {
+
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      text-align: left;
+
+    }
+
+    .left-side {
+      width: 100%;
+      margin: auto;
+    }
+
+    .wrapper4 {
+      position: relative;
+      max-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      top: 750px;
+    }
+
+
+    .table-text {
+
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+
+    }
+
+    .wrapper5 {
+      position: relative;
+      max-width: 100%;
+      top: 800px;
+
+    }
+
+    .pease {
+
+      position: relative;
+      top: 850px;
+
+
+    }
+
+    .bluebox2 {
+      background-color: #4283cd;
+      height: 576px;
+      width: 576px;
+      position: absolute;
+      left: -900px;
+      transform: rotate(140deg);
+      opacity: 10%;
+      border-radius: 50%;
+      box-shadow: 10px 10px 100px 150px #5a8bc4;
+      ;
+
+
+    }
+
+    .pease-text {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      width: 700px;
+      gap: 32px;
+      left: -300px;
+      right: auto;
+    }
+
+    .redbox {
+      background-color: #c13737;
+      height: 576px;
+      width: 576px;
+      position: absolute;
+      right: -900px;
+      transform: rotate(140deg);
+      opacity: 7%;
+      border-radius: 50%;
+      box-shadow: 10px 10px 100px 150px #bd6666;
+    }
+
+    .dashing {
+      font-style: Body500-RG;
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+
+    }
+
+
+    .wrapper6 {
+      position: relative;
+      top: 1200px;
+
+    }
+
+    .wrapper7 {
+      position: relative;
+      top: 1400px;
+    }
+
+    .question-text {
+      font-style: Body500-RG;
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+
+    }
+
+    .input-style {
+      width: 300px;
+      height: Hug (44px)px;
+      padding: 8px 12px 8px 12px;
+      gap: 10px;
+      border-radius: 4px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      opacity: 0px;
+      margin-top: 10px;
+
+    }
+
+    .bluebox3 {
+
+      background-color: #5809ea;
+      height: 576px;
+      width: 576px;
+      position: absolute;
+      right: 900px;
+      transform: rotate(140deg);
+      opacity: 7%;
+      border-radius: 50%;
+      box-shadow: 10px 10px 100px 250px hsl(240, 67%, 64%);
+    }
+
+    .redbox3 {
+
+      background-color: #a13030;
+      height: 576px;
+      width: 576px;
+      position: absolute;
+      left: 900px;
+      top: 20px;
+      transform: rotate(140deg);
+      opacity: 7%;
+      border-radius: 50%;
+      box-shadow: 10px 10px 100px 250px hsl(0, 76%, 71%);
+    }
+
+
+
+    .footer {
+      position: relative;
+      background-color: #0000;
+      height: 100px;
+      width: 100px;
+    }
+
+
+    @media (max-width: 768px) {
+      .left-side, .right-side {
+        flex: 1 1 100%;
+      }
+      .right-side img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./osumar_logo.jpg" height="100px" width="172px" alt="Logo" style="mix-blend-mode: multiply;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto"></ul>
+      <span class="navbar-text">
+        <button class="btn btn-outline-dark" style="border-radius:22px;width: 216px;height: 44px;">Contact me</button>
+      </span>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Blue Box -->
+    <div class="blue-box"></div>
+    <!-- Frame -->
+    <div class="frame">
+      Elevate <span class="middel-text"> Real Estate Success</span> with Osumare's Digital Expertise
+      <div class="downer-text">
+        Tailored Solutions for Thriving in the Digital Real Estate Landscape
+        <button class="get-but"><span class="text-inside">Get Started </span></button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--Header Image-->
+  <div class="wrapper">
+    <img src="./Header-image.png" height="538px" width="796px" alt="not found">
+
+  </div>
+
+  <div class="wrapper2">
+    <div class="heading2">
+      Real Estate-Focused Digital Mastery
+    </div>
+    <div class="landing">
+      <div >
+        <img src="./cuate.jpg" class="landing-img" height="">
+      </div>
+      <div class="text-content">
+        <div class="land-head">
+          Unlock the Potential of Digital Real Estate Excellence
+        </div>
+        <div class="land-text">
+          At Osumare, we understand that the real estate landscape demands a
+          digital presence that aligns with the intricacies of property marketing.
+          Our range of specialized services is meticulously designed to catapult your
+          brand's success in the ever-evolving digital property market.
+        </div>
+        <button class="get-but"><span class="text-inside">Get Started </span></button>
+      </div>
+    </div>
+  </div>
+
+  <!--service offering-->
+
+  <div class="wrapper3">
+    <div class="bg-light">
+      <div class="dash">Our Service Offerings</div>
+      <div class="dash2"> Strategies that Drive Property Market Excellence</div>
+
+      <div class="service-block">
+
+        <div class="row" style="justify-content: center;">
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 117.png" height="52px" width="52px">
+              <div>
+                <span class="service-span">Automotive SEO</span>
+              </div>
+              <div class="service-text">
+                Drive Your Success with Automotive SEO: Ignite Online Visibility and Outrace the Competition. Accelerate
+                Your Business Growth Today
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 118.jpg" height="52px" width="52px">
+              <div>
+                <span class="service-span">PPC Precision</span>
+              </div>
+              <div class="service-text">
+                Maximize visibility and drive quality traffic with meticulously targeted Pay-Per-Click campaigns. </div>
+            </div>
+
+          </div>
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 119.jpg" height="52px" width="52px">
+              <div>
+                <span class="service-span">Social Acceleration</span>
+              </div>
+              <div class="service-text">
+                Engage and influence your audience across social media platforms, amplifying your brand's presence and
+                connection.
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 120.png" height="52px" width="52px">
+              <div>
+                <span class="service-span">Content Excellence</span>
+              </div>
+              <div class="service-text">
+                Craft compelling, automotive-specific content that resonates with enthusiasts and drives engagement.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="service-block">
+
+        <div class="row" style="justify-content: center;">
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 121.png" height="52px" width="52px">
+              <div>
+                <span class="service-span">Web Design</span>
+              </div>
+              <div class="service-text">
+                Transform visitors into customers with high-performance websites designed for seamless user experiences
+                and increased conversions.
+              </div>
+            </div>
+
+          </div>
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 122.png" height="52px" width="52px">
+              <div>
+                <span class="service-span">Data Driven insights</span>
+              </div>
+              <div class="service-text">
+                Leverage data to refine your strategies, making informed decisions that drive revenue growth.
+              </div>
+            </div>
+
+          </div>
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 123.png" height="52px" width="52px">
+              <div>
+                <span class="service-span">End To End Solutions</span>
+              </div>
+              <div class="service-text">
+                From initial awareness to post-purchase loyalty, we offer full-funnel solutions that guide customers
+                through every step of their journey. </div>
+            </div>
+
+          </div>
+
+
+          <div class="s-block col-2">
+            <div>
+              <img src="./Group 124.png" height="40px" width="40px">
+              <div>
+                <span class="service-span">Video Marketing</span>
+              </div>
+              <div class="service-text">
+                Unleash the Power of Video Marketing: Captivate, Engage, and Elevate Your Brand with Compelling Visual
+                Stories.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+      <button class="get-but"><span class="text-inside">Get Started </span></button>
+    </div>
+  </div>
+
+
+
+  <!--navigation real estate -->
+
+
+  <div class="wrapper4">
+    <div class="text-center">
+      <div class="dash">
+        Navigating Real Estate's Digital Landscape
+      </div>
+      <div class="dash2">
+        Insights for Real Estate Marketing Advantage
+      </div>
+    </div>
+
+    <div class="row d-flex mb-5" style="justify-content:space-around;">
+      <div class="col-md-6 left-side">
+        <div class="shadow p-3 mb-5 bg-white rounded d-flex align-items-center">
+          <div>
+            <img src="./Vector.png" height="40px" width="40px" alt="not found" class="mr-3">
+          </div>
+          <div>
+            <span class="left-head">Market Trends Analysis</span><br>
+            <span class="left-text"> Predictive insights to guide real estate strategies.</span>
+          </div>
+        </div>
+        <div class="shadow p-3 mb-5 bg-white rounded d-flex align-items-center">
+          <div>
+            <img src="./flashlight-fill.png" height="40px" width="40px" alt="not found" class="mr-3">
+          </div>
+          <div>
+            <span class="left-head">Targeted Buyer Persona</span><br>
+            <span class="left-text"> Understand and connect with your ideal property buyers. </span>
+          </div>
+        </div>
+        <div class="shadow p-3 mb-5 bg-white rounded d-flex align-items-center">
+          <div>
+            <img src="./group 116.png" height="40px" width="40px" alt="not found" class="mr-3">
+          </div>
+          <div>
+            <span class="left-head">Competitor Insights</span><br>
+            <span class="left-text"> Stand out in the property market with informed strategies.</span>
+          </div>
+        </div>
+        <div class="shadow p-3 mb-5 bg-white rounded d-flex align-items-center">
+          <div>
+            <img src="./visual.png" height="40px" width="40px" alt="not found" class="mr-3">
+          </div>
+          <div>
+            <span class="left-head">Visual Content Appeal</span><br>
+            <span class="left-text"> Captivate buyers with appealing visuals and immersive experiences.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 right-side">
+        <div>
+          <img src="Frame 892.png" alt="not found" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Driving Property Inquiries to Conversions-->
+  <div class="wrapper5">
+    <div class="dash" style="text-align: center;">
+      Navigating Real Estate's Digital Landscape
+    </div>
+
+    <div class="row p-5">
+      <div class="col-6 text-center">
+
+        <img src="./icon.png" height="90px" width="90px"><br>
+        <span class="left-head">Call-to-Action Optimization</span>
+        <div class="table-text">Our carefully crafted CTAs guide potential buyers through the property journey,
+          enhancing engagement and conversion rates.</div>
+      </div>
+
+      <div class="col-6 text-center">
+        <img src="./icon (3).png" height="90px" width="90px"><br>
+        <span class="left-head">Landing Page Efficiency</span>
+        <div class="table-text">Tailored landing pages are designed for maximum property lead conversion. They provide
+          seamless user experiences and clear pathways for inquiry submission.</div>
+      </div>
+    </div>
+
+
+    <div class="row p-5">
+
+      <div class="col-6 text-center">
+        <img src="./icon (2).png" height="90px" width="90px"><br>
+        <span class="left-head">Social Proof Utilization</span>
+        <div class="table-text">Leverage the power of testimonials and success stories from satisfied buyers to build
+          trust and credibility, encouraging hesitant prospects to take action</div>
+      </div>
+      <div class="col-6 text-center">
+        <img src="./Ellipse 183.png" height="90px" width="90px"><br>
+        <span class="left-head">Mobile-Friendly Experience</span>
+        <div class="table-text">With a responsive design approach, our strategies ensure a seamless browsing experience
+          across all devices. This responsiveness enhances engagement and conversions by accommodating the preferences
+          of on-the-go property seekers.</div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!--Our Experties in Action-->
+  <div class="wrapper5">
+    <div class="dash" style="text-align: center;">
+      Our Expertise in Action
+    </div>
+
+    <div class="row p-5">
+      <div class="col-6 text-center">
+
+        <img src="./Ellipse111.png" height="90px" width="90px"><br>
+        <span class="left-head">Effective CTAs</span>
+        <div class="table-text"> See how our strategic CTAs drove a significant increase in property inquiries and
+          accelerated sales for a real estate agency.</div>
+      </div>
+
+      <div class="col-6 text-center">
+        <img src="./icon (4).png" height="90px" width="90px"><br>
+        <span class="left-head">Conversion-Optimized Landing Pages</span>
+        <div class="table-text">Explore a case study where our landing page optimization increased property lead
+          conversion rates by 30%</div>
+      </div>
+    </div>
+
+
+    <div class="row p-5">
+
+      <div class="col-6 text-center">
+        <img src="./icon (5).png" height="90px" width="90px"><br>
+        <span class="left-head">Trust Building with Social Proof</span>
+        <div class="table-text">Discover how leveraging client testimonials boosted buyer confidence, leading to higher
+          conversion rates for a property development project</div>
+      </div>
+      <div class="col-6 text-center">
+        <img src="./icon (6).png" height="90px" width="90px"><br>
+        <span class="left-head">Mobile-First Success:</span>
+        <div class="table-text"> Learn how our mobile-responsive design approach resulted in a 25% increase in inquiries
+          from mobile users for a real estate agency.</div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!--Your Pease of mind-->
+  <div style="margin-top: 100px;">
+    <div class="pease">
+
+      <div class="bluebox2">
+      </div>
+
+      <div class="pease-text">
+        <div class="dash">Your Peace of Mind</div>
+        <div class="dashing">Through our conversion-focused strategies, we ensure that property seekers are not just
+          visitors, but engaged prospects ready to make their next move in the real estate market</div>
+        <button class="get-but"><span class="text-inside">Get Started </span></button>
+
+      </div>
+      <div class="redbox"></div>
+
+    </div>
+  </div>
+
+  <!--Testimoni-->
+  <div class="wrapper6 text-center">
+    <div class="dash">What Our Pharma Partners Say</div>
+    <div class="dash2">Driving Transformations, One Brand at a Time</div>
+    <div>
+      <img src="./Testimonial card.png" class="mt-5" width="650px" height="max-content">
+    </div>
+    <div>
+      <img src="./Frame 294.png" width="100px" height="max-content">
+
+    </div>
+
+  </div>
+
+  <!--Frequesntly asked question-->
+
+  <div class="wrapper7 text-center">
+    <div class="dash">
+      Frequently Asked Questions
+    </div>
+    <div class=" .question-text">
+      Pinpoint your audience with precision, ensuring your marketing efforts reach those most likely to engage with your
+      brand.
+    </div>
+    <div>
+      <img src="./Faq.png" height="376.75" width="1280px">
+
+    </div>
+
+  </div>
+
+  <!--Connect with digital marketing-->
+  <div class="wrapper7">
+    <div class="dash text-center">
+      Connect with Our Digital Marketing Experts
+    </div>
+
+    <div class="dash2">
+      Reach Out for Tailored Strategies and Results-Driven Solutions. Let's Elevate Your Online Presence Together
+    </div>
+    <div class="bluebox3">
+
+    </div>
+    <div
+      style="margin:200px;margin-bottom: 0px; background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px 2px rgb(110, 94, 94);border: 0px solid black;border-radius: 10px;z-index: 1;position: absolute;">
+
+      <form style="padding: 10px;">
+        <div style="display: flex;margin: 50px;justify-content: center;">
+          <div>
+            name:<br>
+            <input type="text" class="input-style"><br>
+            phone:<br>
+            <input type="text" class="input-style"><br>
+            email:<br>
+            <input type="text" class="input-style"><br>
+          </div>
+
+          <div style="margin-left: 30px;">
+            Message:<br>
+            <textarea rows="10" cols="30">
+
+            </textarea>
+
+          </div>
+      </form>
+    </div>
+    <div class="redbox3">
+
+    </div>
+    <div class="text-center" style="margin: 20px;">
+      <button class="get-but">get started</button>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+
+  <!--footer-->
+  <div class="wrapper7" style="margin-top: 800px; background:linear-gradient(261.57deg, rgba(0, 111, 237, 0.12) 18.01%, rgba(179, 214, 255, 0.12) 90.03%);
+      ;height: 500px;width: 1200px;">
+    <div class="d-flex" style="list-style: none;margin: 30px;">
+      <li>
+        <ol><img src="./osumar_logo.jpg" height="100px" width="100px"></ol>
+
+        <ol>The best digital marketing agency in Pune with a proven track record of consistently delivering quality
+          service.</ol>
+        <ol>Survey No. 43, Pathare Thube Nagar, Nagar Road, Kharadi, Pune-14, Maharastra, India.</ol>
+        <ol>Contact</ol>
+        <ol>hello@gmail.com</ol>
+        <ol>9503169644</ol>
+
+      </li>
+
+      <li>
+
+        <ol>Menu</ol>
+        <ol>Home</ol>
+        <ol>About </ol>
+        <ol>service</ol>
+        <ol>Work</ol>
+        <ol>Blog</ol>
+
+      </li>
+      <li>
+        <ol>Social</ol>
+        <ol><img src="./twitter-x-line.png" height="24px" width="24px"></ol>
+        <ol><img src="./facebook-box-fill.png" height="24px" width="24px"></ol>
+        <ol><img src="./whatsapp-fill.png" height="24px" width="24px"></ol>
+        <ol><img src="./pinterest-fill.png" height="24px" width="24px"></ol>
+        <ol><img src="./pinterest-fill (1).png" height="24px" width="24px"></ol>
+
+      </li>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
